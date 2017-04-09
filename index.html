@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="is">
+  <head>
+    <meta charset="utf-8" />
+    <title>Akkúrat</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+  </head>
+
+  <body>
+    <div class="block-wrapper">
+      <div class="block" id="block-1">
+        <img class="logo" id="a" src="assets/svg/Akkurat_logo_A.svg" alt="Akkurat logo" />
+        <img class="logo" id="k" src="assets/svg/Akkurat_logo_K.svg" alt="Akkurat logo" />
+        <img class="logo" id="slokkt" src="assets/svg/Akkurat_logo_slokkt.svg" alt="Akkurat logo" />
+        <img class="logo" id="u" src="assets/svg/Akkurat_logo_U.svg" alt="Akkurat logo" />
+        <img class="logo" id="r" src="assets/svg/Akkurat_logo_R.svg" alt="Akkurat logo" />
+        <img class="logo" id="t" src="assets/svg/Akkurat_logo_T.svg" alt="Akkurat logo" />
+        <h1><b>Akkúrat</b> design surprises and new discoveries</h1>
+      </div><!--
+
+      --><div class="block" id="block-2">
+        <span class="contact">
+          <p style="padding-top: 45px;">Location</p>
+
+          <p style="margin-top: 10%;">Aðalstræti 2</br>
+          Reykjavík</p>
+
+          <p style="margin-top: 5%;">t. 895 4452</br>
+          akkurat@akkurat.is</p>
+        </span>
+      </div><!--
+
+      --><div class="block" id="block-3">
+        <p>Play while you wait</p>
+        <a target="_blank" href="https://open.spotify.com/user/1185871088/playlist/6YBASMdzXCfARpWQPWthDO"><img class="playlist" width=250px src="assets/akkurat_playlist.png" /></a>
+      </div><!--
+
+      --><div class="block" id="block-4">
+        <span class="upper">Akkúrat</span> sells handpicked products from the most current and exciting designers at each time from Iceland and the Nordic countries along with few selected ones from the international design scene.<br />
+        <span class="upper">Akkúrat</span> collaborates with designers and artists in creating a living space with happenings and exhibitions.
+        A place to meet others and to be inspired.<br />
+        The store will open in May 2017.
+
+        <div class="mailing-list"><form><input type="text" placeholder="Join our mailing list for news and updates" /><input type="submit" /></form></div>
+
+        <a href="#contact">Contact</a>
+        <span id="contact">
+          <a href="#close" title="Close" class="close">✕</a>
+          Contact
+
+          <a href="mailto:sigrun@akkurat.is">sigrun@akkurat.is</a>
+
+          For press enquiries,
+          Please contact <a href="mailto:berglind@akkurat.is">berglind@akkurat.is</a>
+
+          Want to sell or collaborate?
+          <a href="mailto:sayhi@akkurat.is">sayhi@akkurat.is</a>
+
+          Download <a>Press Kit</a>
+      </div>
+    </div>
+  </body>
+  <script>
+    var frames = [
+      document.getElementById('a'),
+      document.getElementById('k'),
+      document.getElementById('slokkt'),
+      document.getElementById('k'),
+      document.getElementById('u'),
+      document.getElementById('r'),
+      document.getElementById('a'),
+      document.getElementById('t')
+    ];
+    var current_frame = 7;
+
+    function step() {
+      for (var i = 0; i < frames.length; ++i)
+        if (frames[i])
+          frames[i].style.display='none';
+      current_frame = (current_frame + 1) % frames.length;
+      frames[current_frame].style.display='';
+      if (current_frame == 2) setTimeout(step, 50);
+      else setTimeout(step, 600);
+    }
+    step();
+  </script>
+</html>
